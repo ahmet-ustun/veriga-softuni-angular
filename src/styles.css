@@ -2,3 +2,13 @@
 
 @import url(assets/styles/reset.css);
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+    min-width: 1280px;
+    min-height: 720px;
+    /* padding: 4vh 2vw;
+    box-sizing: border-box; */
+}
