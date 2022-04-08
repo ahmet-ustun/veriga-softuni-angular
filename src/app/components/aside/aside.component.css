@@ -1,0 +1,16 @@
+:host {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.logo a {
+    color: #F5F5F5;
+    font-family: 'Monoton', cursive;
+    font-size: 1.2em;
+}
+
+div.logo a:hover {
+    color: #454545;
+}

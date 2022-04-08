@@ -11,23 +11,17 @@ span.menu-label {
     border-radius: 6px;
 }
 
-div.logo img,
-div.user {
-    padding   : 10px;
-    margin    : 8px;
-}
-
 :host {
     background     : var(--primary-color);
     justify-content: space-between;
 }
 
 i {
-    color: var(--anti-primary);
+    color: #F5F5F5;
 }
 
 i:hover {
-    color: var(--anti-secondary);
+    color: #454545;
 }
 
 a {
@@ -37,8 +31,15 @@ a {
 }
 
 div.logo img {
+    padding   : 1vh;
     background: whitesmoke;
-    width     : 24px;
+    width     : 2.2vw;
+}
+
+div.logo:hover img {
+    animation-name    : halfSpin;
+    animation-duration: 800ms;
+    animation-delay   : 400ms;
 }
 
 div.menu,
