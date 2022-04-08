@@ -1,0 +1,62 @@
+:host,
+div.menu,
+div.user {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+div.logo img,
+span.menu-label {
+    border-radius: 6px;
+}
+
+div.logo img,
+div.user {
+    padding   : 10px;
+    margin    : 8px;
+}
+
+:host {
+    background     : var(--primary-color);
+    justify-content: space-between;
+}
+
+i {
+    color: var(--anti-primary);
+}
+
+i:hover {
+    color: var(--anti-secondary);
+}
+
+a {
+    position  : relative;
+    width     : 100%;
+    text-align: center;
+}
+
+div.logo img {
+    background: whitesmoke;
+    width     : 24px;
+}
+
+div.menu,
+div.user {
+    gap: 24px;
+}
+
+span.menu-label {
+    display   : none;
+    position  : absolute;
+    top       : 50%;
+    left      : 38px;
+    transform : translateY(-50%);
+    background: var(--anti-secondary);
+    color     : var(--secondary-color);
+    padding   : 6px 8px;
+}
+
+a:hover span.menu-label {
+    display: unset;
+}

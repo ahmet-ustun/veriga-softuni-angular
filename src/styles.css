@@ -9,6 +9,25 @@ html {
     font-size: 1.2em;
     min-width: 1280px;
     min-height: 720px;
-    /* padding: 4vh 2vw;
-    box-sizing: border-box; */
+    --primary-color: #007BFF;
+}
+
+html[data-theme="light"] {
+    --secondary-color: #F5F5F5;
+    --anti-primary: #F5F5F5;
+    --anti-secondary: #454545;
+}
+
+html[data-theme="dark"] {
+    --secondary-color: #454545;
+    --anti-primary: #454545;
+    --anti-secondary: #F5F5F5;
+}
+
+i {
+    font-size: 1.4em;
+}
+
+a {
+    text-decoration: none;
 }
