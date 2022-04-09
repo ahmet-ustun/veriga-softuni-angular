@@ -1,1 +1,4 @@
-<p>weather works!</p>
+<img *ngIf="text" [src]="icon" [alt]="text">
+<p *ngIf="text">{{text}}, {{temp}}</p>
+
+<p *ngIf="!text">No weather data!</p>

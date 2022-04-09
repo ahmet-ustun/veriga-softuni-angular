@@ -1,0 +1,5 @@
+:host {
+    font-family: 'Space Mono', monospace;
+    display    : flex;
+    align-items: center;
+}
