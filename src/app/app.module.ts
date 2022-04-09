@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AsideComponent } from './components/aside/aside.component';
+import { ClockComponent } from './components/clock/clock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AsideComponent
+    AsideComponent,
+    ClockComponent
   ],
   imports: [
     BrowserModule

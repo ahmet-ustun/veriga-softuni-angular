@@ -1,16 +1,35 @@
-:host {
-    background: var(--primary-color);
-    display: flex;
-    justify-content: space-between;
+:host,
+div.right {
+    display    : flex;
     align-items: center;
 }
 
+:host,
 div.logo a {
-    color: #F5F5F5;
+    color          : #F5F5F5;
+}
+
+:host {
+    background     : var(--primary-color);
+    justify-content: space-between;
+}
+
+div.logo a {
     font-family: 'Monoton', cursive;
-    font-size: 1.2em;
+    font-size  : 1.2em;
 }
 
 div.logo a:hover {
     color: #454545;
+}
+
+div.right {
+    gap: 12px;
+}
+
+div.right div.line {
+    background   : #F5F5F5;
+    width        : 2px;
+    height       : 32px;
+    border-radius: 2px;
 }

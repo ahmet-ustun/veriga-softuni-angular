@@ -36,10 +36,9 @@ div.logo img {
     width     : 2.2vw;
 }
 
-div.logo:hover img {
+div.logo img:hover {
     animation-name    : halfSpin;
     animation-duration: 800ms;
-    animation-delay   : 400ms;
 }
 
 div.menu,
