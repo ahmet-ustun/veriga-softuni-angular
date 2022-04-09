@@ -12,6 +12,9 @@ export class WeatherComponent implements OnInit {
 	apiKey: string = '4fbb3d5cbb55449485773624220904';
 	weather: any = {};
 
+	isLoading: boolean = true;
+	isBroken: boolean = false;
+
 	icon: string = '';
 	text: string = '';
 	temp: number = 0;
@@ -26,11 +29,22 @@ export class WeatherComponent implements OnInit {
 		const latLon = `&q=${lat},${lon}&aqi=no`;
 
 		this.http.get(url + apiKey + latLon)
-			.subscribe(data => {
-				this.weather = data;
-				this.icon = this.weather.current.condition.icon;
-				this.text = this.weather.current.condition.text;
-				this.temp = Math.round(this.weather.current.temp_c);
+			.subscribe({
+				next: data => {
+					this.weather = data;
+
+					this.icon = this.weather.current.condition.icon;
+					this.text = this.weather.current.condition.text;
+					this.temp = Math.round(this.weather.current.temp_c);
+
+					this.isLoading = false;
+					this.isBroken = false;
+				},
+				error: error => {
+					console.log(error.message);
+					this.isLoading = false;
+					this.isBroken = true;
+				}
 			});
 	}
 
@@ -39,9 +53,21 @@ export class WeatherComponent implements OnInit {
 	) { }
 
 	ngOnInit(): void {
-		navigator.geolocation
-			.getCurrentPosition(position => {
-				this.getWeather(position.coords);
-			});
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(
+				position => {
+					this.getWeather(position.coords);
+				},
+				error => {
+					console.log(error.message);
+					this.isLoading = false;
+					this.isBroken = true;
+				}
+			);
+		} else {
+			console.log('No geolocation!');
+			this.isLoading = false;
+			this.isBroken = true;
 		}
+	}
 }

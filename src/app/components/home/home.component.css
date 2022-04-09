@@ -1,0 +1,28 @@
+:host {
+    background     : var(--secondary-color);
+    color          : var(--anti-secondary);
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    font-size      : 1.2em;
+    line-height    : 1.4em;
+    text-align     : justify;
+}
+
+div.img img {
+    width: 100%;
+}
+
+div.info {
+    display       : flex;
+    flex-direction: column;
+    gap           : 12px;
+}
+
+div.info p:nth-of-type(2n+1) {
+    padding-right: 6vw;
+}
+
+div.info p:nth-of-type(2n) {
+    padding-left: 6vw;
+}

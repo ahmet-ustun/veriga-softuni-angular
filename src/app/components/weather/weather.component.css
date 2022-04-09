@@ -1,5 +1,10 @@
 :host {
     font-family: 'Space Mono', monospace;
     display    : flex;
+    gap        : 8px;
     align-items: center;
+}
+
+img {
+    width: 48px;
 }

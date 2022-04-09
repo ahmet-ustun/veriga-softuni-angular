@@ -1,4 +1,5 @@
 <img *ngIf="text" [src]="icon" [alt]="text">
 <p *ngIf="text">{{text}}, {{temp | celcius}}</p>
 
-<p *ngIf="!text">No weather data!</p>
+<p *ngIf="isLoading">Loading...</p>
+<p *ngIf="isBroken">No weather data!</p>

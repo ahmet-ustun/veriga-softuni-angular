@@ -8,6 +8,8 @@ import { AsideComponent } from './components/aside/aside.component';
 import { ClockComponent } from './components/clock/clock.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { CelciusPipe } from './pipes/celcius.pipe';
+import { HomeComponent } from './components/home/home.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CelciusPipe } from './pipes/celcius.pipe';
     AsideComponent,
     ClockComponent,
     WeatherComponent,
-    CelciusPipe
+    CelciusPipe,
+    HomeComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,

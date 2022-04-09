@@ -6,7 +6,7 @@ div.right {
 
 :host,
 div.logo a {
-    color          : #F5F5F5;
+    color: #F5F5F5;
 }
 
 :host {
@@ -15,8 +15,8 @@ div.logo a {
 }
 
 div.logo a {
-    font-family: 'Monoton', cursive;
-    font-size  : 1.2em;
+    font-family   : 'Righteous', cursive;
+    font-size     : 1.4em;
 }
 
 div.logo a:hover {

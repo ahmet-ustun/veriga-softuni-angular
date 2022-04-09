@@ -6,11 +6,6 @@ div.user {
     align-items   : center;
 }
 
-div.logo img,
-span.menu-label {
-    border-radius: 6px;
-}
-
 :host {
     background     : var(--primary-color);
     justify-content: space-between;
@@ -30,31 +25,21 @@ a {
     text-align: center;
 }
 
-div.logo img {
-    padding   : 1vh;
-    background: whitesmoke;
-    width     : 2.2vw;
-}
-
-div.logo img:hover {
-    animation-name    : halfSpin;
-    animation-duration: 800ms;
-}
-
 div.menu,
 div.user {
     gap: 24px;
 }
 
 span.menu-label {
-    display   : none;
-    position  : absolute;
-    top       : 50%;
-    left      : 38px;
-    transform : translateY(-50%);
-    background: var(--anti-secondary);
-    color     : var(--secondary-color);
-    padding   : 6px 8px;
+    display      : none;
+    position     : absolute;
+    top          : 50%;
+    left         : 38px;
+    transform    : translateY(-50%);
+    background   : var(--anti-secondary);
+    color        : var(--secondary-color);
+    padding      : 6px 8px;
+    border-radius: 6px;
 }
 
 a:hover span.menu-label {

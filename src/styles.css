@@ -4,15 +4,14 @@
 @import url(assets/styles/animations.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 html {
     font-family    : 'Ubuntu', sans-serif;
     font-size      : 1.2em;
-    min-width      : 1280px;
-    min-height     : 720px;
     --primary-color: #007BFF;
+    --main-padding : 12vh;
 }
 
 html[data-theme="light"] {

@@ -1,0 +1,17 @@
+:host {
+    display         : flex;
+    background-color: #F5F5F5;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 80%;
+    width: 80%;
+}
+
+img:hover {
+    animation-name    : halfSpin;
+    animation-duration: 800ms;
+    animation-delay: 400ms;
+}
