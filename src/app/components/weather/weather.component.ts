@@ -30,7 +30,7 @@ export class WeatherComponent implements OnInit {
 				this.weather = data;
 				this.icon = this.weather.current.condition.icon;
 				this.text = this.weather.current.condition.text;
-				this.temp = this.weather.current.temp_c;
+				this.temp = Math.round(this.weather.current.temp_c);
 			});
 	}
 

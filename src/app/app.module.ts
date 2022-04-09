@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { ClockComponent } from './components/clock/clock.component';
 import { WeatherComponent } from './components/weather/weather.component';
+import { CelciusPipe } from './pipes/celcius.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WeatherComponent } from './components/weather/weather.component';
     NavbarComponent,
     AsideComponent,
     ClockComponent,
-    WeatherComponent
+    WeatherComponent,
+    CelciusPipe
   ],
   imports: [
     BrowserModule,

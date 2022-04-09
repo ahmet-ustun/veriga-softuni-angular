@@ -8,23 +8,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 html {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.2em;
-    min-width: 1280px;
-    min-height: 720px;
+    font-family    : 'Ubuntu', sans-serif;
+    font-size      : 1.2em;
+    min-width      : 1280px;
+    min-height     : 720px;
     --primary-color: #007BFF;
 }
 
 html[data-theme="light"] {
     --secondary-color: #F5F5F5;
-    --anti-primary: #F5F5F5;
-    --anti-secondary: #454545;
+    --anti-primary   : #F5F5F5;
+    --anti-secondary : #454545;
 }
 
 html[data-theme="dark"] {
     --secondary-color: #454545;
-    --anti-primary: #454545;
-    --anti-secondary: #F5F5F5;
+    --anti-primary   : #454545;
+    --anti-secondary : #F5F5F5;
 }
 
 i {
