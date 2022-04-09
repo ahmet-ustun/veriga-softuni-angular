@@ -1,0 +1,16 @@
+:host {
+    margin        : var(--main-margin);
+    display       : flex;
+    flex-direction: column;
+    gap           : 48px;
+    align-items   : center;
+}
+
+img {
+    width: 60%;
+}
+
+p {
+    font-size: 1.8em;
+    font-weight: 500;
+}

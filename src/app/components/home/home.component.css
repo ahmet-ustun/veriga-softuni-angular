@@ -1,10 +1,10 @@
 :host {
-    background     : var(--secondary-color);
-    color          : var(--anti-secondary);
+    margin         : var(--main-margin);
     display        : flex;
     justify-content: space-between;
     align-items    : center;
     font-size      : 1.2em;
+    font-weight    : 500;
     line-height    : 1.4em;
     text-align     : justify;
 }

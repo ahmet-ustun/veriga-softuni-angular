@@ -15,6 +15,7 @@ i {
     color: #F5F5F5;
 }
 
+a.active i,
 i:hover {
     color: #454545;
 }
