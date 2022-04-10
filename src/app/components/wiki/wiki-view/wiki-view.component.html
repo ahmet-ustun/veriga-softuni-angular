@@ -3,15 +3,21 @@
     <p>No Result</p>
 </div>
 
-<div class="bill-card">
+<div class="bill-card" *ngIf="isFound">
     <div class="flip">
-        <div class="flip-inner">
-            <div class="flip-front">
-                <img [src]="billObj.imageA" [alt]="billObj.code + '-' + billObj.amount + ' Front'">
-            </div>
-            <div class="flip-back">
-                <img [src]="billObj.imageB" [alt]="billObj.code + '-' + billObj.amount + ' Back'">
-            </div>
+        <div class="inner">
+            <img [src]="billObj.imageA" [alt]="billObj.code + '-' + billObj.amount + ' Front'">
+            <img [src]="billObj.imageB" [alt]="billObj.code + '-' + billObj.amount + ' Back'">
         </div>
+    </div>
+    <div class="info">
+        <br>
+        <p>
+            <span>Obverse:</span> {{billObj.descrA}}
+        </p>
+        <br>
+        <p>
+            <span>Reverse:</span> {{billObj.descrB}}
+        </p>
     </div>
 </div>

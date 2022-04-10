@@ -23,45 +23,57 @@ div.no-result p {
 }
 
 div.bill-card {
-    margin-left    : 10px;
-    box-sizing     : border-box;
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
+    margin    : auto 12px;
+    height    : 100%;
+    box-sizing: border-box;
+    display   : grid;
+    grid-template-rows: 40% 60%;
+    gap       : 12px;
 }
 
-div.bill-card img {
-    width: 100%;
+div.flip,
+div.inner,
+div.inner img {
+    width      : 100%;
+    height     : 100%;
 }
 
 div.flip {
-    width      : 100%;
-    height     : 165px;
-    perspective: 1000px;
+    perspective: 6000px;
 }
 
-div.flip-inner {
+div.inner {
     position       : relative;
-    width          : 100%;
-    height         : 100%;
     transition     : transform 0.8s;
     transform-style: preserve-3d;
 }
 
-div.flip:hover div.flip-inner {
+div.flip:hover div.inner {
     transform: rotateY(180deg);
 }
 
-div.flip-front,
-div.flip-back {
+div.inner img:first-child,
+div.inner img:last-child {
     position           : absolute;
-    width              : 100%;
-    height             : 100%;
     backface-visibility: hidden;
     border-radius      : 6px;
-    overflow           : hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-div.flip-back {
-    transform      : rotateY(180deg);
+div.inner img:last-child {
+    transform: rotateY(180deg);
+}
+
+div.info {
+    overflow-x: auto;
+}
+
+div.info p {
+    text-align: justify;
+    text-indent: 12px;
+    line-height: 1.2em;
+}
+
+div.info span {
+    font-weight: 500;
 }

@@ -10,8 +10,8 @@ section {
 }
 
 div.header h1 {
-    font-size     : 1.2em;
-    font-weight   : 500;
+    font-size  : 1.2em;
+    font-weight: 500;
 }
 
 div.wallet {
@@ -24,17 +24,13 @@ div.wallet {
 
 div.wallet img {
     width        : 80%;
-    border-width : 2px;
-    border-style : solid;
-    border-color : var(--anti-secondary);
     border-radius: 8px;
+    box-shadow   : rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-div.wallet img:hover {
-    border-width: 3px;
-}
-
+div.wallet img:hover,
 div.wallet a.active img {
     border-width: 3px;
+    border-style : solid;
     border-color: var(--primary-color);
 }
