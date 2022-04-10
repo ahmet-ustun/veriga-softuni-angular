@@ -1,0 +1,55 @@
+:host {
+    margin               : var(--main-margin);
+    display              : grid;
+    grid-template-columns: 1fr 2fr;
+    align-items          : center;
+    gap                  : 48px;
+}
+
+div.social {
+    display           : grid;
+    gap               : 24px;
+    grid-template-rows: 3fr 1fr;
+}
+
+div.social img {
+    width        : 70%;
+    justify-self : center;
+    border-radius: 50%;
+}
+
+div.social div {
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+}
+
+div.social div a {
+    font-size: 1.6em;
+    color    : var(--anti-secondary);
+}
+
+div.social div a:hover {
+    color: var(--primary-color);
+}
+
+div.about p {
+    font-size  : 1.2em;
+    font-weight: 500;
+    line-height: 1.4em;
+    text-align : justify;
+}
+
+div.about p:not(div.about p:first-child) {
+    padding-left: 24px;
+}
+
+div.about p:first-child span {
+    display                  : inline-block;
+    transform-origin         : 75% 75%;
+    animation-name           : waveHand;
+    animation-duration       : 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay          : 0.6s;
+    animation-iteration-count: infinite;
+}

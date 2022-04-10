@@ -15,6 +15,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { WikiPageComponent } from './components/wiki/wiki-page/wiki-page.component';
 import { WikiViewComponent } from './components/wiki/wiki-view/wiki-view.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { WikiViewComponent } from './components/wiki/wiki-view/wiki-view.compone
     LogoComponent,
     NotFoundComponent,
     WikiPageComponent,
-    WikiViewComponent
+    WikiViewComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

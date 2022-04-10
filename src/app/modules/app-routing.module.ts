@@ -5,6 +5,7 @@ import { HomeComponent } from '../components/home/home.component';
 import { WikiPageComponent } from '../components/wiki/wiki-page/wiki-page.component';
 import { WikiViewComponent } from '../components/wiki/wiki-view/wiki-view.component';
 import { NotFoundComponent } from '../components/not-found/not-found.component';
+import { AboutComponent } from '../components/about/about.component';
 
 const routes: Routes = [
 	{
@@ -20,6 +21,10 @@ const routes: Routes = [
 				component: WikiViewComponent
 			}
 		]
+	},
+	{
+		path: 'about',
+		component: AboutComponent
 	},
 	{
 		path: '',
