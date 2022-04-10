@@ -1,0 +1,40 @@
+:host {
+    margin         : calc(var(--main-margin)/2);
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+}
+
+section {
+    text-align: center;
+}
+
+div.header h1 {
+    font-size     : 1.2em;
+    font-weight   : 500;
+}
+
+div.wallet {
+    display              : grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows   : repeat(3, 165px);
+    justify-content      : center;
+    align-items          : center;
+}
+
+div.wallet img {
+    width        : 80%;
+    border-width : 2px;
+    border-style : solid;
+    border-color : var(--anti-secondary);
+    border-radius: 8px;
+}
+
+div.wallet img:hover {
+    border-width: 3px;
+}
+
+div.wallet a.active img {
+    border-width: 3px;
+    border-color: var(--primary-color);
+}

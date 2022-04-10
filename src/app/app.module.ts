@@ -13,7 +13,8 @@ import { CelciusPipe } from './pipes/celcius.pipe';
 import { HomeComponent } from './components/home/home.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { WikiPageComponent } from './components/wiki-page/wiki-page.component';
+import { WikiPageComponent } from './components/wiki/wiki-page/wiki-page.component';
+import { WikiViewComponent } from './components/wiki/wiki-view/wiki-view.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { WikiPageComponent } from './components/wiki-page/wiki-page.component';
     HomeComponent,
     LogoComponent,
     NotFoundComponent,
-    WikiPageComponent
+    WikiPageComponent,
+    WikiViewComponent
   ],
   imports: [
     BrowserModule,
