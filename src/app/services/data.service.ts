@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-	billData: object[] = [
+	billData: any = [
 		{
 			code: 'bgn',
 			amount: 1,

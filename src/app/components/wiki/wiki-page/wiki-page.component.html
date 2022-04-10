@@ -11,8 +11,8 @@
     <br>
     <div class="wallet">
         <article *ngFor="let bill of collection">
-            <a routerLink="{{bill.code + bill.amount}}" routerLinkActive="active">
-                <img [src]="bill.imageA" [alt]="bill.code + bill.amount">
+            <a routerLink="{{bill.code + '-' + bill.amount}}" routerLinkActive="active">
+                <img [src]="bill.imageA" [alt]="bill.code + '-' + bill.amount">
             </a>
         </article>
     </div>

@@ -16,6 +16,5 @@ export class WikiPageComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.collection = this.dataService.billData;
-		console.log(this.collection)
 	}
 }
