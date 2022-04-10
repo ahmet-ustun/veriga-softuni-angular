@@ -1,1 +1,17 @@
-<p>{{paramId}}</p>
+<div class="no-result" *ngIf="!isFound">
+    <img src="../../../../assets/images/void-no-result.svg" alt="No Result">
+    <p>No Result</p>
+</div>
+
+<div class="bill-card">
+    <div class="flip">
+        <div class="flip-inner">
+            <div class="flip-front">
+                <img [src]="billObj.imageA" [alt]="billObj.code + '-' + billObj.amount + ' Front'">
+            </div>
+            <div class="flip-back">
+                <img [src]="billObj.imageB" [alt]="billObj.code + '-' + billObj.amount + ' Back'">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,67 @@
 :host {
-    flex-grow       : 1;
-    background-color: red;
+    flex-grow      : 1;
+    border-left    : 4px solid var(--primary-color);
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+}
+
+div.no-result {
+    display       : flex;
+    flex-direction: column;
+    gap           : 36px;
+    align-items   : center;
+}
+
+div.no-result img {
+    width: 70%;
+}
+
+div.no-result p {
+    font-size  : 1.4em;
+    font-weight: 500;
+}
+
+div.bill-card {
+    margin-left    : 10px;
+    box-sizing     : border-box;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+div.bill-card img {
+    width: 100%;
+}
+
+div.flip {
+    width      : 100%;
+    height     : 165px;
+    perspective: 1000px;
+}
+
+div.flip-inner {
+    position       : relative;
+    width          : 100%;
+    height         : 100%;
+    transition     : transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+div.flip:hover div.flip-inner {
+    transform: rotateY(180deg);
+}
+
+div.flip-front,
+div.flip-back {
+    position           : absolute;
+    width              : 100%;
+    height             : 100%;
+    backface-visibility: hidden;
+    border-radius      : 6px;
+    overflow           : hidden;
+}
+
+div.flip-back {
+    transform      : rotateY(180deg);
 }
