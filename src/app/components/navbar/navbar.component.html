@@ -19,23 +19,27 @@
         </span>
     </a>
 </div>
-<div class="user">
+<div class="user" *ngIf="auth.user | async as user; else showLogin">
     <a routerLink="/user" routerLinkActive="active">
         <i class="fas fa-user"></i>
         <span class="menu-label">
             Profile
         </span>
     </a>
-    <a routerLink="/login" routerLinkActive="active">
+    <a role="button" style="cursor: pointer;" (click)="logout()">
         <i class="fas fa-sign-out-alt"></i>
         <span class="menu-label">
             Logout
         </span>
     </a>
-    <a routerLink="/logout" routerLinkActive="active">
-        <i class="fas fa-sign-in-alt"></i>
-        <span class="menu-label">
-            Login
-        </span>
-    </a>
 </div>
+<ng-template #showLogin>
+    <div class="user">
+        <a role="button" style="cursor: pointer;" (click)="login()">
+            <i class="fas fa-sign-in-alt"></i>
+            <span class="menu-label">
+                Login
+            </span>
+        </a>
+    </div>
+</ng-template>

@@ -13,4 +13,22 @@
     <p>
         You can share this story with others and meet the people who have traveled the same way.
     </p>
+    <div class="button" *ngIf="auth.user | async as user; else showGoogle">
+        <br>
+        <a routerLink="/user">
+            <span>
+                Add a New Bill 💸
+            </span>
+        </a>
+    </div>
 </div>
+<ng-template #showGoogle>
+    <div class="button">
+        <br>
+        <a role="button" style="cursor: pointer;" (click)="login()">
+            <span>
+                Login with Google
+            </span>
+        </a>
+    </div>
+</ng-template>

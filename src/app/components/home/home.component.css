@@ -26,3 +26,28 @@ div.info p:nth-of-type(2n+1) {
 div.info p:nth-of-type(2n) {
     padding-left: 6vw;
 }
+
+div.info div.button {
+    width          : 74%;
+    display        : grid;
+    gap            : 12px;
+    justify-content: center;
+    align-items    : center;
+}
+
+div.info div.button a {
+    position: relative;
+    font-weight: 400;
+}
+
+div.info div.button a:hover {
+    bottom: 2px;
+}
+
+div.info div.button span {
+    background   : var(--primary-color);
+    color        : #F5F5F5;
+    padding      : 8px 12px;
+    border-radius: 4px;
+    box-shadow   : rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

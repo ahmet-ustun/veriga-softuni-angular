@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'app-weather',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class WeatherComponent implements OnInit {
 
-	apiKey: string = '4fbb3d5cbb55449485773624220904';
+	apiKey: string = environment.weather.apiKey;
 	weather: any = {};
 
 	isLoading: boolean = true;
