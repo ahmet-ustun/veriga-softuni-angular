@@ -20,6 +20,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { WikiPageComponent } from './components/wiki/wiki-page/wiki-page.component';
 import { WikiViewComponent } from './components/wiki/wiki-view/wiki-view.component';
 import { AboutComponent } from './components/about/about.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AboutComponent } from './components/about/about.component';
     NotFoundComponent,
     WikiPageComponent,
     WikiViewComponent,
-    AboutComponent
+    AboutComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

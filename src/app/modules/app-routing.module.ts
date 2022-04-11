@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/compat/auth-guard';
+
 import { HomeComponent } from '../components/home/home.component';
 import { WikiPageComponent } from '../components/wiki/wiki-page/wiki-page.component';
 import { WikiViewComponent } from '../components/wiki/wiki-view/wiki-view.component';
 import { NotFoundComponent } from '../components/not-found/not-found.component';
 import { AboutComponent } from '../components/about/about.component';
+import { UserComponent } from '../components/user/user.component';
+
+const redirectUnauthorizedToHome = () => redirectUnauthorizedTo(['home']);
 
 const routes: Routes = [
 	{
@@ -25,6 +30,11 @@ const routes: Routes = [
 	{
 		path: 'about',
 		component: AboutComponent
+	},
+	{
+		path: 'user',
+		component: UserComponent,
+		...canActivate(redirectUnauthorizedToHome)
 	},
 	{
 		path: '',
