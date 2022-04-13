@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { AppRoutingModule } from './modules/app-routing.module';
 
@@ -40,6 +41,7 @@ import { UserComponent } from './components/user/user.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     HttpClientJsonpModule,
     AppRoutingModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import Firebase from 'firebase/compat/app';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
 	selector: 'app-home',
@@ -10,6 +10,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class HomeComponent implements OnInit {
 
 	constructor(
+		public authService: AuthService,
 		public auth: AngularFireAuth
 	) { }
 
@@ -18,9 +19,6 @@ export class HomeComponent implements OnInit {
 	}
 
 	login() {
-		const provider = new Firebase.auth
-			.GoogleAuthProvider();
-
-		this.auth.signInWithPopup(provider);
+		this.authService.googleLogin();
 	}
 }
