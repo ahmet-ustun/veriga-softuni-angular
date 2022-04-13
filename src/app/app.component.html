@@ -1,6 +1,6 @@
 <app-logo></app-logo>
 <app-navbar></app-navbar>
 <app-aside></app-aside>
-<div class="wrapper">
-    <router-outlet></router-outlet>
+<div class="wrapper" [@slideInAnimation]="out.isActivated ? out.activatedRoute : null">
+    <router-outlet #out="outlet"></router-outlet>
 </div>
