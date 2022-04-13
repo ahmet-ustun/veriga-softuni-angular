@@ -15,8 +15,8 @@ div.logo a {
 }
 
 div.logo a {
-    font-family   : 'Righteous', cursive;
-    font-size     : 1.4em;
+    font-family: 'Righteous', cursive;
+    font-size  : 1.4em;
 }
 
 div.logo a:hover {
@@ -32,4 +32,50 @@ div.right div.line {
     width        : 2px;
     height       : 32px;
     border-radius: 2px;
+}
+
+div.toggle {
+    position  : relative;
+    align-self: center;
+    transform : scale(0.8);
+}
+
+div.toggle i {
+    font-size: 100%;
+}
+
+div.toggle input {
+    position: absolute;
+    top     : 4px;
+    left    : 22px;
+    opacity : 0%;
+}
+
+div.toggle label {
+    background-color: #454545;
+    padding         : 6px 8px;
+    width           : 45px;
+    height          : 15px;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    position        : relative;
+    border-radius   : 50px;
+    cursor          : pointer;
+    transform       : scale(1.2);
+}
+
+div.toggle div.ball {
+    background-color: #F5F5F5;
+    width           : 26px;
+    height          : 23px;
+    position        : absolute;
+    top             : 2px;
+    left            : 4px;
+    border-radius   : 50px;
+    transition      : all 200ms ease-out;
+}
+
+div.toggle input:checked+label div.ball {
+    transform: translateX(28px);
 }

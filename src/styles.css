@@ -15,16 +15,20 @@ html {
     --main-margin  : 12vh;
 }
 
-html[data-theme="light"] {
+body.light-mode {
     --secondary-color: #F5F5F5;
     --anti-primary   : #F5F5F5;
     --anti-secondary : #454545;
 }
 
-html[data-theme="dark"] {
+body.dark-mode {
     --secondary-color: #454545;
     --anti-primary   : #454545;
     --anti-secondary : #F5F5F5;
+}
+
+body:not(.dark-mode-preloading) {
+    transition: all 0.3s linear;
 }
 
 i {

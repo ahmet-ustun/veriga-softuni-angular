@@ -7,4 +7,13 @@
     <app-weather></app-weather>
     <div class="line"></div>
     <app-clock></app-clock>
+    <div class="line"></div>
+    <div class="toggle">
+        <input type="checkbox" id="checkbox" [checked]="darkMode$ | async" (change)="onToggle()">
+        <label for="checkbox">
+            <i class='fas fa-sun'></i>
+            <i class="fas fa-moon"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
 </div>
