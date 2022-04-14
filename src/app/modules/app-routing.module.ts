@@ -8,7 +8,7 @@ import { WikiPageComponent } from '../components/wiki/wiki-page/wiki-page.compon
 import { WikiViewComponent } from '../components/wiki/wiki-view/wiki-view.component';
 import { NotFoundComponent } from '../components/not-found/not-found.component';
 import { AboutComponent } from '../components/about/about.component';
-import { UserComponent } from '../components/user/user.component';
+import { UserComponent } from '../components/user/user-page/user.component';
 
 const redirectUnauthorizedToHome = () => redirectUnauthorizedTo(['home']);
 
