@@ -1,1 +1,25 @@
-<p>user-form works!</p>
+<p>
+    If you have found a stamped bill, you are in the correct place. All you have to do is enter the serial number on the bill and tell where and how you have found it. 
+</p>
+<hr>
+<form [formGroup]="billForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <legend>
+            Serial No:
+        </legend>
+        <select formControlName="letter1">
+            <option *ngFor="let letter of collection" [value]="letter">{{letter}}</option>
+        </select>
+        <select formControlName="letter2">
+            <option *ngFor="let letter of collection" [value]="letter">{{letter}}</option>
+        </select>
+        <input type="number" formControlName="serial" placeholder="1234567">
+    </fieldset>
+    <fieldset>
+        <legend>
+            Bill Story:
+        </legend>
+        <textarea formControlName="message" placeholder="Tell us more..."></textarea>
+    </fieldset>
+    <input type="submit" value="Submit">
+</form>

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { AppRoutingModule } from './modules/app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { environment } from 'src/environments/environment';
 import { CelciusPipe } from './pipes/celcius.pipe';
@@ -41,8 +42,8 @@ import { UserLogsComponent } from './components/user/user-logs/user-logs.compone
 		AboutComponent,
 		UserComponent,
 		NotFoundComponent,
-  UserFormComponent,
-  UserLogsComponent
+		UserFormComponent,
+		UserLogsComponent
 	],
 	imports: [
 		BrowserModule,
@@ -52,7 +53,8 @@ import { UserLogsComponent } from './components/user/user-logs/user-logs.compone
 		AppRoutingModule,
 		AngularFireModule.initializeApp(environment.firebase),
 		AngularFireAuthModule,
-		AngularFirestoreModule
+		AngularFirestoreModule,
+		ReactiveFormsModule
 	],
 	providers: [],
 	bootstrap: [
