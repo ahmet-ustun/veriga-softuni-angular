@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { FormBuilder, FormArray, Validators } from '@angular/forms';
 import { AbcService } from 'src/app/services/abc.service';
 
 @Component({
@@ -9,19 +10,41 @@ import { AbcService } from 'src/app/services/abc.service';
 })
 export class UserFormComponent implements OnInit {
 
-	billForm = new FormGroup({
-		letter1: new FormControl(''),
-		letter2: new FormControl(''),
-		serial: new FormControl(''),
-		message: new FormControl(''),
+	billForm = this.formBuilder.group({
+		ltr1: [
+			null,
+			[
+				Validators.required
+			]
+		], ltr2: [
+			null,
+			[
+				Validators.required
+			]
+		], srl: [
+			null,
+			[
+				Validators.required, 
+				Validators.min(1000000), 
+				Validators.max(99999999)
+			]
+		], msg: [
+			null,
+			[
+				Validators.required, 
+				Validators.maxLength(250)
+			]
+		],
 	});
 
-	serialNo: string = '';
-	message: string='';
+	serial: string = '';
+	story: string = '';
 	collection: string[] = [];
 
 	constructor(
-		private abcService: AbcService
+		private abcService: AbcService,
+		public auth: AngularFireAuth,
+		public formBuilder: FormBuilder
 	) { }
 
 	ngOnInit(): void {
@@ -29,10 +52,16 @@ export class UserFormComponent implements OnInit {
 	}
 
 	onSubmit() {
-		let {letter1, letter2, serial} = this.billForm.value;
-		this.serialNo = letter1 + letter2 + serial;
-		this.message = this.billForm.value.message;
+		let { ltr1, ltr2, srl } = this.billForm.value;
+		this.serial = ltr1 + ltr2 + srl;
+		this.story = this.billForm.value.msg;
 
-		console.log(this.billForm.value);
+		this.auth.user.subscribe(data => {
+			// console.log(data?.email);
+		});
+
+		if (this.billForm.valid) {
+
+		}
 	}
 }

@@ -7,19 +7,19 @@
         <legend>
             Serial No:
         </legend>
-        <select formControlName="letter1">
-            <option *ngFor="let letter of collection" [value]="letter">{{letter}}</option>
+        <select formControlName="ltr1">
+            <option *ngFor="let letter of collection" [ngValue]="letter">{{letter}}</option>
         </select>
-        <select formControlName="letter2">
-            <option *ngFor="let letter of collection" [value]="letter">{{letter}}</option>
+        <select formControlName="ltr2">
+            <option *ngFor="let letter of collection" [ngValue]="letter">{{letter}}</option>
         </select>
-        <input type="number" formControlName="serial" placeholder="1234567">
+        <input type="number" formControlName="srl" placeholder="1234567">
     </fieldset>
     <fieldset>
         <legend>
             Bill Story:
         </legend>
-        <textarea formControlName="message" placeholder="Tell us more..."></textarea>
+        <textarea formControlName="msg" placeholder="Tell us more..."></textarea>
     </fieldset>
-    <input type="submit" value="Submit">
+    <input *ngIf="billForm.valid" type="submit" value="✔️ Submit">
 </form>
