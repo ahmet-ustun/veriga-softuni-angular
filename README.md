@@ -1,27 +1,43 @@
 # Veriga
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+This is an [Angular project](https://veriga.web.app/) created by Ahmet Ustun for the SoftUni Angular exam.
 
-## Development server
+"Veriga" is a project which aims to show us that money travels long distances, meets new people and becomes a part of their stories.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+All logged-in users with a stampted bill can leave a story that can be read by other people until next time that bill is discovered.
 
-## Code scaffolding
+## All Users
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In the website, all users can visit:
 
-## Build
+### `Home`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+In the Home page, a very brief explanation about the project is given.
 
-## Running unit tests
+Logged-out users will be redirected here.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+There is a button that changes behaviour depending on the user status.
 
-## Running end-to-end tests
+### `Wiki`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Users will be able to check the Bulgarian bills from the 99 collection.
 
-## Further help
+### `Wiki - Details`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+If details are needed about a specific bill, there is a embed sidebar.
+
+### `About`
+
+Users can know more about me and in case, they can get my social links.
+
+## Logged-in Users
+
+In the website, only logged-in users can visit:
+
+### `User`
+
+Only logged-in users are able to enter a bill.
+
+Each bill has ability to remove an older story.
+
+Same user can use a bill more than a few time.
