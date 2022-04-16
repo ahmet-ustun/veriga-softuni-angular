@@ -73,14 +73,14 @@ textarea {
     color     : var(--secondary-color);
 }
 
-select.ng-touched.ng-valid,
-input.ng-touched.ng-valid,
-textarea.ng-touched.ng-valid {
+select.ng-dirty.ng-valid,
+input.ng-dirty.ng-valid,
+textarea.ng-dirty.ng-valid {
     border-left: 4px solid green;
 }
 
-select.ng-touched.ng-invalid,
-input.ng-touched.ng-invalid,
-textarea.ng-touched.ng-invalid {
+select.ng-dirty.ng-invalid,
+input.ng-dirty.ng-invalid,
+textarea.ng-dirty.ng-invalid {
     border-left: 4px solid red;
 }

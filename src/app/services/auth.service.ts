@@ -11,7 +11,15 @@ export class AuthService {
 	constructor(
 		public auth: AngularFireAuth,
 		private router: Router
-	) { }
+	) {
+		this.auth.authState.subscribe(user => {
+			if (user) {
+				localStorage.setItem('user', JSON.stringify(user));
+			} else {
+				localStorage.removeItem('user');
+			}
+		});
+	}
 
 	googleLogin() {
 		const provider = new Firebase.auth
