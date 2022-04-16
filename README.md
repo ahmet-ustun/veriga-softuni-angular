@@ -6,6 +6,18 @@ This is an [Angular project](https://veriga.web.app/) created by Ahmet Ustun for
 
 All logged-in users with a stampted bill can leave a story that can be read by other people until next time that bill is discovered.
 
+## Development
+
+Run `npm install` to download all the node dependencies.
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+
+* The app will automatically reload if you change any of the source files.
+
+Run `ng build` to build the project. 
+
+* The build artifacts will be stored in the `dist/` directory.
+
 ## All Users
 
 In the website, all users can visit:
