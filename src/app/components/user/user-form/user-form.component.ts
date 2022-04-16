@@ -52,7 +52,7 @@ export class UserFormComponent implements OnInit {
 		public auth: AngularFireAuth,
 		public formBuilder: FormBuilder,
 		private billChecker: CheckService,
-		public fireService: FireService,
+		private fireService: FireService,
 	) {}
 
 	update(serialNo: any, userLog: any) {
@@ -68,20 +68,11 @@ export class UserFormComponent implements OnInit {
 	onSubmit() {
 		let { ltr1, ltr2, srl } = this.billForm.value;
 		this.serial = ltr1 + ltr2 + srl;
-
-		let email: any = this.user.email;
 		let displayName: any = this.user.displayName;
-		let photoURL: any = this.user.photoURL;
-		let dateNow: any = Date.now();
 		this.story = this.billForm.value.msg;
 
 		let newData = {
-			[email]: [
-				displayName,
-				photoURL,
-				String(dateNow),
-				this.story
-			]
+			[displayName]: this.story
 		};
 
 		if (this.billForm.valid) {

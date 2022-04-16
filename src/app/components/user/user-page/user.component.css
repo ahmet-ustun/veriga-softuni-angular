@@ -56,4 +56,6 @@ div.add-bill {
 div.user-logs {
     grid-column: 3/6;
     grid-row   : 1/6;
+    padding: 24px;
+    overflow: auto;
 }
