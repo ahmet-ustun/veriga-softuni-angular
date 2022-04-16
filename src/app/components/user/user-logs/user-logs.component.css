@@ -1,9 +1,9 @@
 :host {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 h2 {
-    font-size: 1.4em;
+    font-size  : 1.2em;
     font-weight: 500;
     text-align : center;
 }
@@ -15,7 +15,10 @@ hr {
     box-sizing: border-box;
 }
 
+pre {
+    white-space: pre-wrap;
+}
+
 p {
-    text-align: justify;
     word-wrap: break-word;
 }

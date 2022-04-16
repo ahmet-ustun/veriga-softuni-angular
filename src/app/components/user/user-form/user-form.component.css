@@ -73,6 +73,10 @@ textarea {
     color     : var(--secondary-color);
 }
 
+::placeholder {
+    color     : var(--secondary-color);
+}
+
 select.ng-dirty.ng-valid,
 input.ng-dirty.ng-valid,
 textarea.ng-dirty.ng-valid {
